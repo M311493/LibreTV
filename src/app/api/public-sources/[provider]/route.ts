@@ -1,10 +1,10 @@
 import { NextRequest, NextResponse } from 'next/server';
 
-export const runtime = 'edge';
+type Provider = 'nasa' | 'commons';
 
 const PAGE_SIZE = 24;
 const NASA_API = 'https://images-api.nasa.gov/search';
-const COMMONS_SEARCH_API = 'https://commons.wikimedia.org/ww.rest.php/v1/search/page';
+const COMMONS_SEARCH_API = 'https://commons.wikimedia.org/w/rest.php/v1/search/page';
 
 const COMMONS_FALLBACK = [
   {
